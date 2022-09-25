@@ -21,10 +21,10 @@ pipeline {
 		always {
 			echo 'I run always'
 		}
-		Success {
+		success {
 			echo 'I run when success'
 		}
-		Fail {
+		failure {
 			echo 'I run when fail'
 		}
 	}
