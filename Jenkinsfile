@@ -1,6 +1,5 @@
 
 pipeline {
-	agent any
  	environment {
  		dockerHome = tool 'myDocker'
  		mavenHome = tool 'myMaven'
@@ -8,11 +7,10 @@ pipeline {
 	
 	}
 	agent {
-	  docker {
-	  image 'maven:3-alpine'
-	  args '-v $HOME/.m2:/root/.m2'
-	  }
-	  }
+		  docker {
+		  image 'maven:3.3.6'
+		  }
+	}
 	stages {
 		stage('Checkout') {
 			steps {
